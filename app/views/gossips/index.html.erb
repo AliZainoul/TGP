@@ -1,0 +1,12 @@
+<h1>Hello and welcome to our page,</h1> <br>
+<p>Here is the list of all gossips : </p>
+
+<%@gossips.each do |g|%>
+  <p>
+    <h4>Gossip : <%=link_to g.title, gossip_path(g.id)%></h4>
+    <a href="<%= gossip_path(g.id) %>" class ="btn btn-primary">Read More?</a>
+    <a href="<%= edit_gossip_path(g.id) %>" class="btn btn-default">Edit?</a>
+    <a href="<%= gossip_path(g.id) %>" class="btn btn-danger" data-confirm="Are you sure?" data-method="DELETE"> Delete? </a>
+    <a href="<%= new_gossip_path %>" class="btn btn-success">Build a Gossip </a>
+  </p>
+<%end%>

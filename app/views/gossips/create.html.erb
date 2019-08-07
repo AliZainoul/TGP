@@ -1,0 +1,11 @@
+<h1>Welcome home!</h1>
+<p>Hello anonymous</p>
+
+<form action="/" method="post">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  Please enter your Gossip's title :
+  <input type="text" name="gossip_title">
+  Please enter your Gossip's content :
+  <input type="text" name="gossip_content">
+  <input type="submit" name="Valider">
+</form>
